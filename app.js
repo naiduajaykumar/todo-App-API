@@ -145,6 +145,7 @@ app.put("/todos/:todoId", async (request, response) => {
             id= ${todoId};`;
   const previousTodo = await db.get(previousTodoQuery);
 
+  /**Will assign the old values(previousTodo.x) to "x", if any new respective value present in request.body will assign to it. */
   const {
     todo = previousTodo.todo,
     priority = previousTodo.priority,
