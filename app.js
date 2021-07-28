@@ -179,4 +179,3 @@ app.delete("/todos/:todoId/", async (request, response) => {
   response.send("Todo Deleted");
 });
 
-module.exports = app;
